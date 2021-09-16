@@ -1,3 +1,5 @@
 virtual/
 node_modules/
 out/
+.vscode/
+__pycache__/
