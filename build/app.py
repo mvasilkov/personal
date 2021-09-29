@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from build.pages import build_pages
 
 

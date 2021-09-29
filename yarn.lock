@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@primer/css@^17.10.0":
-  version "17.10.0"
-  resolved "https://registry.yarnpkg.com/@primer/css/-/css-17.10.0.tgz#a8534e234928f93bb04405fc5ec9ca98bcb58fcf"
-  integrity sha512-w1mkRKq6/Q52Y7s1VwR2bKIPJZ6pkxcdYRA16kjm68pGhjHZA5XeDKsjRBtnz8GNFvJMfh4E3/wQLTms3gQL3A==
+"@primer/css@^17.11.0":
+  "integrity" "sha512-BGBVzM/SgMM96Q+FFSZlAyXF4MHaSQB7tvvgwTcPqPoNrW1zLVteWbdeQoLNHGphHXL0AlhpInmNXvlhUinOUw=="
+  "resolved" "https://registry.npmjs.org/@primer/css/-/css-17.11.0.tgz"
+  "version" "17.11.0"
   dependencies:
-    "@primer/primitives" "4.7.1"
+    "@primer/primitives" "^4.7.1"
 
-"@primer/primitives@4.7.1":
-  version "4.7.1"
-  resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-4.7.1.tgz#2510ca37dd83d1e9cacda7637f2a594edff0391d"
-  integrity sha512-kttAUcP3QgT5UbYLeMTKDxPvnAVzywX0xnKPcLkmEVQyhmEBlTO4LSlYIzL5YcKyklHcFRf1426UcGOY9wdWDQ==
+"@primer/primitives@^4.7.1":
+  "integrity" "sha512-kttAUcP3QgT5UbYLeMTKDxPvnAVzywX0xnKPcLkmEVQyhmEBlTO4LSlYIzL5YcKyklHcFRf1426UcGOY9wdWDQ=="
+  "resolved" "https://registry.npmjs.org/@primer/primitives/-/primitives-4.7.1.tgz"
+  "version" "4.7.1"
