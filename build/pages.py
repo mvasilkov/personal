@@ -1,3 +1,4 @@
+from build.external.git import git_clean_out
 from build.settings import PHP_ROOT
 
 PAGES_DIR = PHP_ROOT / 'pages'
@@ -6,6 +7,9 @@ OUT_DIR = PHP_ROOT / 'out'
 
 def build_pages():
     pages = PAGES_DIR.rglob('*.md')
+
+    # Clean
+    git_clean_out()
 
     # Make dirs
     dirs_rel = {p.parent.relative_to(PAGES_DIR) for p in pages}
