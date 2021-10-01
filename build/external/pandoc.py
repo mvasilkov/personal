@@ -17,3 +17,24 @@ def check_available():
         raise RuntimeError(f'Expected pandoc 2, got {version.group(1)!r}')
 
     return version_tuple
+
+
+def pandoc_get_page(path):
+    try:
+        result = check_output(
+            [
+                'pandoc',
+                '--read',
+                'gfm+tex_math_dollars',
+                '--write',
+                'html',
+                '--katex',
+                '--no-highlight',
+                path,
+            ],
+            encoding='utf-8',
+        )
+    except FileNotFoundError:
+        raise RuntimeError('Cannot run pandoc')
+
+    return result

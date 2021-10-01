@@ -1,4 +1,5 @@
 from build.external.git import git_clean_out
+from build.external.pandoc import pandoc_get_page
 from build.settings import PHP_ROOT
 
 PAGES_DIR = PHP_ROOT / 'pages'
@@ -6,7 +7,7 @@ OUT_DIR = PHP_ROOT / 'out'
 
 
 def build_pages():
-    pages = PAGES_DIR.rglob('*.md')
+    pages = list(PAGES_DIR.rglob('*.md'))
 
     # Clean
     git_clean_out()
@@ -22,3 +23,9 @@ def build_pages():
             continue
 
         out_dir.mkdir(parents=True)
+
+    # Build pages
+    for page_path in pages:
+        page_content = pandoc_get_page(page_path)
+
+        print(page_content)
