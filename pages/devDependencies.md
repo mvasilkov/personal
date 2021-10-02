@@ -1,5 +1,4 @@
-Development dependencies
-===
+# Development dependencies
 
 This site's development dependencies are as follows:
 
