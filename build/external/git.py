@@ -24,3 +24,44 @@ def git_clean_out():
         check_call(['git', 'clean', '--force', '--quiet', '-x', 'out'])
     except FileNotFoundError:
         raise RuntimeError('Cannot run git clean')
+
+
+def git_log_created(path):
+    try:
+        result = check_output(
+            [
+                'git',
+                'log',
+                '--follow',
+                '-1',
+                '--pretty=%ad',
+                '--diff-filter=a',
+                '--',
+                path,
+            ],
+            encoding='utf-8',
+        )
+    except FileNotFoundError:
+        raise RuntimeError(f'Cannot run git log {path!r}')
+
+    return result
+
+
+def git_log_updated(path):
+    try:
+        result = check_output(
+            [
+                'git',
+                'log',
+                '--follow',
+                '-1',
+                '--pretty=%ad',
+                '--',
+                path,
+            ],
+            encoding='utf-8',
+        )
+    except FileNotFoundError:
+        raise RuntimeError(f'Cannot run git log {path!r}')
+
+    return result

@@ -35,6 +35,6 @@ def pandoc_get_page(path):
             encoding='utf-8',
         )
     except FileNotFoundError:
-        raise RuntimeError('Cannot run pandoc')
+        raise RuntimeError(f'Cannot run pandoc {path!r}')
 
     return result
