@@ -1,3 +1,6 @@
+from bs4 import BeautifulSoup
+from bs4.element import NavigableString
+
 from build.external.git import git_clean_out
 from build.external.pandoc import pandoc_get_page
 from build.settings import PHP_ROOT
@@ -29,3 +32,12 @@ def build_pages():
         page_content = pandoc_get_page(page_path)
 
         print(page_content)
+
+
+def get_page_props(page_content: str):
+    soup = BeautifulSoup(page_content, 'html5lib', multi_valued_attributes=None)
+    assert soup.body is not None
+
+    children = (a for a in soup.body.children if type(a) is not NavigableString)
+    first_child = next(children)
+    second_child = next(children)
