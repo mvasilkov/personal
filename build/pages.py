@@ -1,5 +1,6 @@
-from bs4 import BeautifulSoup
-from bs4.element import NavigableString
+from dataclasses import dataclass
+
+from bs4 import BeautifulSoup, NavigableString
 
 from build.external.git import git_clean_out
 from build.external.pandoc import pandoc_get_page
@@ -7,6 +8,13 @@ from build.settings import PHP_ROOT
 
 PAGES_DIR = PHP_ROOT / 'pages'
 OUT_DIR = PHP_ROOT / 'out'
+
+
+@dataclass
+class PageProps:
+    title: str = ''
+    created: int = 0
+    updated: int = 0
 
 
 def build_pages():

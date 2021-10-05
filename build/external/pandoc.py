@@ -30,6 +30,7 @@ def pandoc_get_page(path):
                 'html',
                 '--katex',
                 '--no-highlight',
+                '--',
                 path,
             ],
             encoding='utf-8',
