@@ -1,3 +1,4 @@
+from ast import literal_eval
 from dataclasses import dataclass
 
 from bs4 import BeautifulSoup, NavigableString
@@ -41,6 +42,10 @@ def build_pages():
 
         print(page_content)
 
+        props = get_page_props(page_content)
+
+        print(props)
+
 
 def get_page_props(page_content: str):
     soup = BeautifulSoup(page_content, 'html5lib', multi_valued_attributes=None)
@@ -49,3 +54,19 @@ def get_page_props(page_content: str):
     children = (a for a in soup.body.children if type(a) is not NavigableString)
     first_child = next(children)
     second_child = next(children)
+
+    if first_child.name == 'h1':
+        return PageProps(title=first_child.get_text())
+
+    if first_child.name == 'pre' and first_child.get('class') == 'python':
+        options = literal_eval(first_child.get_text())
+        props = PageProps(**options)
+
+        if not props.title:
+            assert second_child.name == 'h1'
+
+            props.title = second_child.get_text()
+
+        return props
+
+    assert False
