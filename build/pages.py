@@ -1,7 +1,9 @@
 from ast import literal_eval
 from dataclasses import dataclass
+from typing import Generator, cast
 
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup
+from bs4.element import NavigableString, Tag
 
 from build.external.git import git_clean_out
 from build.external.pandoc import pandoc_get_page
@@ -47,11 +49,15 @@ def build_pages():
         print(props)
 
 
-def get_page_props(page_content: str):
+def get_page_props(page_content: str) -> PageProps:
     soup = BeautifulSoup(page_content, 'html5lib', multi_valued_attributes=None)
-    assert soup.body is not None
+    if soup.body is None:
+        raise RuntimeError('BeautifulSoup broke')
 
-    children = (a for a in soup.body.children if type(a) is not NavigableString)
+    children = cast(
+        Generator[Tag, None, None],
+        (a for a in soup.body.children if type(a) is not NavigableString),
+    )
     first_child = next(children)
     second_child = next(children)
 
@@ -63,10 +69,11 @@ def get_page_props(page_content: str):
         props = PageProps(**options)
 
         if not props.title:
-            assert second_child.name == 'h1'
+            if second_child.name != 'h1':
+                raise RuntimeError('Missing title')
 
             props.title = second_child.get_text()
 
         return props
 
-    assert False
+    raise RuntimeError('Missing title and options')
