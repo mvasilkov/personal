@@ -16,6 +16,7 @@ OUT_DIR = PHP_ROOT / 'out'
 @dataclass
 class PageProps:
     title: str = ''
+    content: str = ''
     created: int = 0
     updated: int = 0
 
@@ -41,12 +42,12 @@ def build_pages():
     # Build pages
     for page_path in pages:
         page_content = pandoc_get_page(page_path)
-
-        print(page_content)
-
         props = get_page_props(page_content)
 
+        print('---')
         print(props)
+        print('---')
+        print(props.content)
 
 
 def get_page_props(page_content: str) -> PageProps:
@@ -62,10 +63,11 @@ def get_page_props(page_content: str) -> PageProps:
     second_child = next(children)
 
     if first_child.name == 'h1':
-        return PageProps(title=first_child.get_text())
+        return PageProps(title=first_child.get_text(), content=page_content)
 
     if first_child.name == 'pre' and first_child.get('class') == 'python':
         options = literal_eval(first_child.get_text())
+        options['content'] = clean_options(page_content)
         props = PageProps(**options)
 
         if not props.title:
@@ -77,3 +79,7 @@ def get_page_props(page_content: str) -> PageProps:
         return props
 
     raise RuntimeError('Missing title and options')
+
+
+def clean_options(page_content: str) -> str:
+    return page_content.split('</code></pre>\n', 1).pop()
