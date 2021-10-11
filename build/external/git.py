@@ -35,7 +35,7 @@ def git_log_created(path):
                 '--follow',
                 '-1',
                 '--pretty=format:%at',
-                '--diff-filter=a',
+                '--diff-filter=A',
                 '--',
                 path,
             ],
@@ -44,7 +44,7 @@ def git_log_created(path):
     except FileNotFoundError:
         raise RuntimeError(f'Cannot run git log {path!r}')
 
-    return result
+    return 0 if result == '' else int(result)
 
 
 def git_log_updated(path):
@@ -64,4 +64,4 @@ def git_log_updated(path):
     except FileNotFoundError:
         raise RuntimeError(f'Cannot run git log {path!r}')
 
-    return result
+    return 0 if result == '' else int(result)
