@@ -1,5 +1,5 @@
 from ast import literal_eval
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from typing import Generator, cast
 
 from bs4 import BeautifulSoup
@@ -8,6 +8,7 @@ from bs4.element import NavigableString, Tag
 from build.external.git import git_clean_out, git_log_created, git_log_updated
 from build.external.pandoc import pandoc_get_page
 from build.settings import PHP_ROOT
+from build.templates import render_to_file
 
 PAGES_DIR = PHP_ROOT / 'pages'
 OUT_DIR = PHP_ROOT / 'out'
@@ -46,10 +47,9 @@ def build_pages():
         props.created = git_log_created(page_path)
         props.updated = git_log_updated(page_path)
 
-        print('---')
-        print(props)
-        print('---')
-        print(props.content)
+        out_file = OUT_DIR / page_path.relative_to(PAGES_DIR).with_suffix('.html')
+        print('Writing', out_file)
+        render_to_file('page.html', asdict(props), out_file)
 
 
 def get_page_props(page_content: str) -> PageProps:
