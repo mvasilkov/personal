@@ -14,7 +14,7 @@ def check_available():
 
     version_tuple = tuple(version.group(1).split('.'))
     if version_tuple[0] != '2':
-        raise RuntimeError(f'Expected git 2, got {version.group(1)!r}')
+        raise RuntimeError(f'Expected git version 2, got {version.group(1)!r}')
 
     return version_tuple
 
