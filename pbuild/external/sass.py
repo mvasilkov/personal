@@ -1,14 +1,16 @@
+import platform
 import re
 from subprocess import check_output
 
-from pebuild.settings import PHP_ROOT
+from pbuild.settings import PHP_ROOT
 
 SASS_EXECUTABLE = PHP_ROOT / 'node_modules' / '.bin' / 'sass'
+USE_SHELL = platform.system() == 'Windows'
 
 
 def check_available():
     try:
-        result = check_output([SASS_EXECUTABLE, '--version'], encoding='utf-8', shell=True)
+        result = check_output([SASS_EXECUTABLE, '--version'], encoding='utf-8', shell=USE_SHELL)
     except FileNotFoundError:
         raise RuntimeError('Cannot run sass')
 

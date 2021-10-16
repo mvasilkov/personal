@@ -3,7 +3,7 @@ from pathlib import Path
 
 from django.template import Context, Engine
 
-from pebuild.settings import PHP_ROOT
+from pbuild.settings import PHP_ROOT
 
 TEMPLATES_DIR = PHP_ROOT / 'templates'
 

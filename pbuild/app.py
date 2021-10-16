@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from pebuild.external import git, pandoc, sass
-from pebuild.pages import build_pages
+from pbuild.external import git, pandoc, sass
+from pbuild.pages import build_pages
 
 
 def run():
