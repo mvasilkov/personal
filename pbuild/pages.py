@@ -20,6 +20,7 @@ class PageProps:
     content: str = ''
     created: int = 0
     updated: int = 0
+    use_katex: bool = False
 
 
 def build_pages():
@@ -57,6 +58,8 @@ def get_page_props(page_content: str) -> PageProps:
     if soup.body is None:
         raise RuntimeError('BeautifulSoup broke')
 
+    use_katex = soup.find(class_='math display') is not None
+
     children = cast(
         Generator[Tag, None, None],
         (a for a in soup.body.children if type(a) is not NavigableString),
@@ -65,11 +68,12 @@ def get_page_props(page_content: str) -> PageProps:
     second_child = next(children)
 
     if first_child.name == 'h1':
-        return PageProps(title=first_child.get_text(), content=page_content)
+        return PageProps(title=first_child.get_text(), content=page_content, use_katex=use_katex)
 
     if first_child.name == 'pre' and first_child.get('class') == 'python':
         options = literal_eval(first_child.get_text())
         options['content'] = clean_options(page_content)
+        options['use_katex'] = use_katex
         props = PageProps(**options)
 
         if not props.title:
