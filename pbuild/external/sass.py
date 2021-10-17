@@ -2,9 +2,9 @@ import platform
 import re
 from subprocess import check_output
 
-from pbuild.settings import PHP_ROOT
+from pbuild.settings import NODE_MODULES
 
-SASS_EXECUTABLE = PHP_ROOT / 'node_modules' / '.bin' / 'sass'
+SASS_EXECUTABLE = NODE_MODULES / '.bin' / 'sass'
 USE_SHELL = platform.system() == 'Windows'
 
 
@@ -23,3 +23,22 @@ def check_available():
         raise RuntimeError(f'Expected sass version 1, got {version.group(1)!r}')
 
     return version_tuple
+
+
+def sass_get_stylesheet(path):
+    try:
+        result = check_output(
+            [
+                SASS_EXECUTABLE,
+                '--load-path',
+                NODE_MODULES,
+                '--',
+                path,
+            ],
+            encoding='utf-8',
+            shell=USE_SHELL,
+        )
+    except FileNotFoundError:
+        raise RuntimeError(f'Cannot run sass {path!r}')
+
+    return result
