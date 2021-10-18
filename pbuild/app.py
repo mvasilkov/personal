@@ -2,6 +2,7 @@
 
 from pbuild.external import git, pandoc, sass
 from pbuild.pages import build_pages
+from pbuild.stylesheets import build_css
 
 
 def run():
@@ -10,6 +11,7 @@ def run():
     sass.check_available()
 
     build_pages()
+    build_css()
 
 
 if __name__ == '__main__':

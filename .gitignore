@@ -4,3 +4,4 @@ out/
 .vscode/
 __pycache__/
 .idea/
+php.egg-info/

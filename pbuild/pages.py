@@ -20,6 +20,7 @@ class PageProps:
     content: str = ''
     created: int = 0
     updated: int = 0
+    template_name: str = 'default.html'
     use_katex: bool = False
 
 
@@ -50,7 +51,7 @@ def build_pages():
 
         out_file = OUT_DIR / page_path.relative_to(PAGES_DIR).with_suffix('.html')
         print('Writing', out_file)
-        render_to_file('page.html', asdict(props), out_file)
+        render_to_file(props.template_name, asdict(props), out_file)
 
 
 def get_page_props(page_content: str) -> PageProps:
