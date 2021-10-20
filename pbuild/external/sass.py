@@ -1,16 +1,14 @@
-import platform
 import re
 from subprocess import check_output
 
-from pbuild.settings import NODE_MODULES
+from pbuild.settings import NODE_MODULES, NODE_USE_SHELL
 
 SASS_EXECUTABLE = NODE_MODULES / '.bin' / 'sass'
-USE_SHELL = platform.system() == 'Windows'
 
 
 def check_available():
     try:
-        result = check_output([SASS_EXECUTABLE, '--version'], encoding='utf-8', shell=USE_SHELL)
+        result = check_output([SASS_EXECUTABLE, '--version'], encoding='utf-8', shell=NODE_USE_SHELL)
     except FileNotFoundError:
         raise RuntimeError('Cannot run sass')
 
@@ -36,7 +34,7 @@ def sass_get_stylesheet(path):
                 path,
             ],
             encoding='utf-8',
-            shell=USE_SHELL,
+            shell=NODE_USE_SHELL,
         )
     except FileNotFoundError:
         raise RuntimeError(f'Cannot run sass {path!r}')

@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@primer/css": "^18.0.1",
+    "@primer/css": "^18.0.2",
     "katex": "^0.13.18",
     "less": "^4.1.2",
     "sass": "^1.43.2"

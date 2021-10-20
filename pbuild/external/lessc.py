@@ -1,16 +1,14 @@
-import platform
 import re
 from subprocess import check_output
 
-from pbuild.settings import NODE_MODULES
+from pbuild.settings import NODE_MODULES, NODE_USE_SHELL
 
 LESSC_EXECUTABLE = NODE_MODULES / '.bin' / 'lessc'
-USE_SHELL = platform.system() == 'Windows'
 
 
 def check_available():
     try:
-        result = check_output([LESSC_EXECUTABLE, '--version'], encoding='utf-8', shell=USE_SHELL)
+        result = check_output([LESSC_EXECUTABLE, '--version'], encoding='utf-8', shell=NODE_USE_SHELL)
     except FileNotFoundError:
         raise RuntimeError('Cannot run lessc')
 
@@ -23,3 +21,12 @@ def check_available():
         raise RuntimeError(f'Expected lessc version 4, got {version.group(1)!r}')
 
     return version_tuple
+
+
+def lessc_get_stylesheet(path):
+    try:
+        result = check_output([LESSC_EXECUTABLE, path], encoding='utf-8', shell=NODE_USE_SHELL)
+    except FileNotFoundError:
+        raise RuntimeError(f'Cannot run lessc {path!r}')
+
+    return result
