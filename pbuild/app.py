@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from pbuild.external import git, pandoc, sass, lessc
+from pbuild.external import git, pandoc, sass, lessc, cleancss
 from pbuild.pages import build_pages
 from pbuild.stylesheets import build_css
 
@@ -10,6 +10,7 @@ def run():
     pandoc.check_available()
     sass.check_available()
     lessc.check_available()
+    cleancss.check_available()
 
     build_pages()
     build_css()
