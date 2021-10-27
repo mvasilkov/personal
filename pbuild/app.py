@@ -6,11 +6,11 @@ from pbuild.stylesheets import build_css
 
 
 def run():
-    git.check_available()
-    pandoc.check_available()
-    sass.check_available()
-    lessc.check_available()
-    cleancss.check_available()
+    git.git_check_available()
+    pandoc.pandoc_check_available()
+    sass.sass_check_available()
+    lessc.lessc_check_available()
+    cleancss.cleancss_check_available()
 
     build_pages()
     build_css()

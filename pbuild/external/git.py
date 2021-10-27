@@ -2,7 +2,7 @@ import re
 from subprocess import check_call, check_output
 
 
-def check_available():
+def git_check_available():
     try:
         result = check_output(['git', '--version'], encoding='utf-8')
     except FileNotFoundError:

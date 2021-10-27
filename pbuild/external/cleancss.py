@@ -6,7 +6,7 @@ from pbuild.settings import NODE_MODULES, NODE_USE_SHELL
 CLEANCSS_EXECUTABLE = NODE_MODULES / '.bin' / 'cleancss'
 
 
-def check_available():
+def cleancss_check_available():
     try:
         result = check_output([CLEANCSS_EXECUTABLE, '--version'], encoding='utf-8', shell=NODE_USE_SHELL)
     except FileNotFoundError:

@@ -6,7 +6,7 @@ from pbuild.settings import NODE_MODULES, NODE_USE_SHELL
 LESSC_EXECUTABLE = NODE_MODULES / '.bin' / 'lessc'
 
 
-def check_available():
+def lessc_check_available():
     try:
         result = check_output([LESSC_EXECUTABLE, '--version'], encoding='utf-8', shell=NODE_USE_SHELL)
     except FileNotFoundError:

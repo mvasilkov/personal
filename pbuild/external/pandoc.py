@@ -2,7 +2,7 @@ import re
 from subprocess import check_output
 
 
-def check_available():
+def pandoc_check_available():
     try:
         result = check_output(['pandoc', '--version'], encoding='utf-8')
     except FileNotFoundError:
