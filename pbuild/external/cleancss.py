@@ -1,5 +1,6 @@
+from pathlib import Path
 import re
-from subprocess import check_output
+from subprocess import check_call, check_output
 
 from pbuild.settings import NODE_MODULES, NODE_USE_SHELL
 
@@ -21,3 +22,27 @@ def cleancss_check_available():
         raise RuntimeError(f'Expected cleancss version 5, got {version.group(1)!r}')
 
     return version_tuple
+
+
+def cleancss_optimize(in_path: Path, out_path: Path = None, delete=True):
+    if out_path is None:
+        out_path = in_path.with_stem(f'{in_path.stem}-min')
+
+    try:
+        check_call(
+            [
+                CLEANCSS_EXECUTABLE,
+                '-O1',
+                'specialComments:0',
+                '--output',
+                out_path,
+                '--',
+                in_path,
+            ],
+            shell=NODE_USE_SHELL,
+        )
+    except FileNotFoundError:
+        raise RuntimeError(f'Cannot run cleancss {in_path!r}')
+
+    if delete:
+        in_path.unlink()

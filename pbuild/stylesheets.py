@@ -1,5 +1,6 @@
 from pbuild.external.lessc import lessc_get_stylesheet
 from pbuild.external.sass import sass_get_stylesheet
+from pbuild.external.cleancss import cleancss_optimize
 from pbuild.settings import PHP_ROOT
 
 
@@ -12,6 +13,8 @@ def build_css():
     with open(out_file, 'w', encoding='utf-8', newline='\n') as out:
         out.write(css)
 
+    cleancss_optimize(out_file)
+
     css = lessc_get_stylesheet(PHP_ROOT / 'stylesheets' / 'katex.less')
     out_file = PHP_ROOT / 'out' / 'static' / 'katex.css'
 
@@ -19,3 +22,5 @@ def build_css():
 
     with open(out_file, 'w', encoding='utf-8', newline='\n') as out:
         out.write(css)
+
+    cleancss_optimize(out_file)
