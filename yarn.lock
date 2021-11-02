@@ -209,10 +209,10 @@ is-what@^3.12.0:
   resolved "https://registry.yarnpkg.com/is-what/-/is-what-3.14.1.tgz#e1222f46ddda85dead0fd1c9df131760e77755c1"
   integrity sha512-sNxgpk9793nzSs7bA6JQJGeIuRBQhAaNGG77kzYQgMkrID+lS6SlK07K5LaptscDlSaIgH+GPFzf+d75FVxozA==
 
-katex@^0.13.23:
-  version "0.13.23"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.23.tgz#39376f02274f0ca0f59fff77d39270bfa138dc5f"
-  integrity sha512-Lxki3QN7I/jGSFPcApMYnBVsfqAsG92E/cCB8l8csUOCCEK7i4xo9bxbm0ENW2JdxgZdeA0yYl+A8+m3mdK6JQ==
+katex@^0.15.1:
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.15.1.tgz#cf4ce2fa1257c3279cc7a7fe0c8d1fab40800893"
+  integrity sha512-KIk+gizli0gl1XaJlCYS8/donGMbzXYTka6BbH3AgvDJTOwyDY4hJ+YmzJ1F0y/3XzX5B9ED8AqB2Hmn2AZ0uA==
   dependencies:
     commander "^8.0.0"
 
