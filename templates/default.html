@@ -2,6 +2,12 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+{% block head %}
+    {% if use_katex %}
+    <link rel="stylesheet" href="/static/katex-min.css">
+    {% endif %}
+{% endblock %}
+
 {% block content %}
 {{ content|safe }}
 {% endblock %}

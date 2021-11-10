@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="/static/app.css">
+        <link rel="stylesheet" href="/static/app-min.css">
+        {% block head %}{% endblock %}
     </head>
     <body>
         <article class="markdown-body">{% block content %}{% endblock %}</article>
