@@ -1,9 +1,9 @@
 {
   "devDependencies": {
-    "@primer/css": "^18.1.0",
-    "clean-css-cli": "^5.4.2",
+    "@primer/css": "^19.1.0",
+    "clean-css-cli": "^5.5.0",
     "katex": "^0.15.1",
     "less": "^4.1.2",
-    "sass": "^1.43.4"
+    "sass": "^1.44.0"
   }
 }
