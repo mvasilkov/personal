@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 from subprocess import check_call, check_output
 
-from pbuild.settings import NODE_MODULES, NODE_USE_SHELL
+from xbuild.settings import NODE_MODULES, NODE_USE_SHELL
 
 CLEANCSS_EXECUTABLE = NODE_MODULES / '.bin' / 'cleancss'
 

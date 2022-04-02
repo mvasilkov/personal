@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@primer/css@^19.1.1":
-  version "19.1.1"
-  resolved "https://registry.yarnpkg.com/@primer/css/-/css-19.1.1.tgz#c05a2fc5e5f6950472b4ff3bdd70cda6fe1c13f1"
-  integrity sha512-QVwdNOJsLxOD6eTR5LDIdLWg2SIy+eZWMK4ywlLd8qZXJCngtJyTNO5PtSzgs0D9jlMS+dzxvlOOV6GcfLu1hw==
+"@primer/css@^19.7.1":
+  version "19.7.1"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-19.7.1.tgz#36f8f185a36df57b300d0ec0db731b9a52b4ed0b"
+  integrity sha512-g3ffaBiyVs0hUqlN89YnLA0rs5zc8PtTbs+w7CSb45M/xAz0+grD6Yo81ECGpfxhAn1AuRIfcX79CPnogbpDgw==
   dependencies:
-    "@primer/primitives" "^7.2.0"
+    "@primer/primitives" "^7.5.1"
 
-"@primer/primitives@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-7.2.0.tgz#049fc6d2fef20ea7fa517e583671aa0a8a26e9e9"
-  integrity sha512-7HkPAn7gnCcKPfDrqJc9OCUttPwBcoJRj2JR78obUbCkSfRV4I7cZiMS8tf9rYJ9HV69u+km8ab2Jrf4eOnVBg==
+"@primer/primitives@^7.5.1":
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-7.7.0.tgz#4e838afaf997036720a43ebab0211d2de77b1606"
+  integrity sha512-LSd96U2/A70obilbdYiEKI8D/wXUtZnKmUI/ScLOlGDju4iuwd3pJsmFoBwM1Us6vV23V6mapIG+lh27RzauaA==
 
 anymatch@~3.1.2:
   version "3.1.2"
@@ -62,20 +62,20 @@ braces@~3.0.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-clean-css-cli@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/clean-css-cli/-/clean-css-cli-5.5.0.tgz#86a927e102149a2b950cf4edab045670a70c1a96"
-  integrity sha512-Vr9t8o59YaPcRw/4hyJjEh4zU/BlOtlJJ8465El6QMYWbkf5nN1mhAljX6FIb0bfpkGlYNFKPCyTz7oFCHOblQ==
+clean-css-cli@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/clean-css-cli/-/clean-css-cli-5.6.0.tgz#ba25b2f28ec72b69f671920aa894aaccde009dfb"
+  integrity sha512-68vorNEG808D1QzeerO9AlwQVTuaR8YSK4aqwIsjJq0wDSyPH11ApHY0O+EQrdEGUZcN+d72v+Nn/gpxjAFewQ==
   dependencies:
     chokidar "^3.5.2"
-    clean-css "^5.2.2"
+    clean-css "^5.3.0"
     commander "7.x"
     glob "^7.1.6"
 
-clean-css@^5.2.2:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-5.2.2.tgz#d3a7c6ee2511011e051719838bdcf8314dc4548d"
-  integrity sha512-/eR8ru5zyxKzpBLv9YZvMXgTSSQn7AdkMItMYynsFgGwTveCRVam9IUPFloE85B4vAIj05IuKmmEoV7/AQjT0w==
+clean-css@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-5.3.0.tgz#ad3d8238d5f3549e83d5f87205189494bc7cbb59"
+  integrity sha512-YYuuxv4H/iNb1Z/5IbMRoxgrzjWGhOEFfd+groZ5dMCVkpENiMZmwspdrzBo9286JjM1gZJPAyL7ZIdzuvu2AQ==
   dependencies:
     source-map "~0.6.0"
 
@@ -215,10 +215,10 @@ is-what@^3.12.0:
   resolved "https://registry.yarnpkg.com/is-what/-/is-what-3.14.1.tgz#e1222f46ddda85dead0fd1c9df131760e77755c1"
   integrity sha512-sNxgpk9793nzSs7bA6JQJGeIuRBQhAaNGG77kzYQgMkrID+lS6SlK07K5LaptscDlSaIgH+GPFzf+d75FVxozA==
 
-katex@^0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.15.1.tgz#cf4ce2fa1257c3279cc7a7fe0c8d1fab40800893"
-  integrity sha512-KIk+gizli0gl1XaJlCYS8/donGMbzXYTka6BbH3AgvDJTOwyDY4hJ+YmzJ1F0y/3XzX5B9ED8AqB2Hmn2AZ0uA==
+katex@^0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.15.3.tgz#08781a7ed26800b20380d959d1ffcd62bca0ec14"
+  integrity sha512-Al6V7RJsmjklT9QItyHWGaQCt+NYTle1bZwB1e9MR/tLoIT1MXaHy9UpfGSB7eaqDgjjqqRxQOaQGrALCrEyBQ==
   dependencies:
     commander "^8.0.0"
 
@@ -322,10 +322,10 @@ readdirp@~3.6.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.45.1:
-  version "1.45.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.45.1.tgz#fa03951f924d1ba5762949567eaf660e608a1ab0"
-  integrity sha512-pwPRiq29UR0o4X3fiQyCtrESldXvUQAAE0QmcJTpsI4kuHHcLzZ54M1oNBVIXybQv8QF2zfkpFcTxp8ta97dUA==
+sass@^1.49.11:
+  version "1.49.11"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.49.11.tgz#1ffeb77faeed8b806a2a1e021d7c9fd3fc322cb7"
+  integrity sha512-wvS/geXgHUGs6A/4ud5BFIWKO1nKd7wYIGimDk4q4GFkJicILActpv9ueMT4eRGSsp1BdKHuw1WwAHXbhsJELQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"

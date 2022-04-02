@@ -1,7 +1,7 @@
 import re
 from subprocess import check_output
 
-from pbuild.settings import NODE_MODULES, NODE_USE_SHELL
+from xbuild.settings import NODE_MODULES, NODE_USE_SHELL
 
 LESSC_EXECUTABLE = NODE_MODULES / '.bin' / 'lessc'
 

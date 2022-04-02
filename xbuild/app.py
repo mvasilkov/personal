@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-from pbuild.external import git, pandoc, sass, lessc, cleancss
-from pbuild.pages import build_pages
-from pbuild.stylesheets import build_css
+from xbuild.external import git, pandoc, sass, lessc, cleancss
+from xbuild.pages import build_pages
+from xbuild.stylesheets import build_css
 
 
 def run():

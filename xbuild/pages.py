@@ -5,10 +5,10 @@ from typing import Generator, cast
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString, Tag
 
-from pbuild.external.git import git_clean_out, git_log_created, git_log_updated
-from pbuild.external.pandoc import pandoc_get_page
-from pbuild.settings import PHP_ROOT
-from pbuild.templates import render_to_file
+from xbuild.external.git import git_clean_out, git_log_created, git_log_updated
+from xbuild.external.pandoc import pandoc_get_page
+from xbuild.settings import PHP_ROOT
+from xbuild.templates import render_to_file
 
 PAGES_DIR = PHP_ROOT / 'pages'
 OUT_DIR = PHP_ROOT / 'out'
