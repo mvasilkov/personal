@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@primer/css@^19.7.1":
-  version "19.7.1"
-  resolved "https://registry.yarnpkg.com/@primer/css/-/css-19.7.1.tgz#36f8f185a36df57b300d0ec0db731b9a52b4ed0b"
-  integrity sha512-g3ffaBiyVs0hUqlN89YnLA0rs5zc8PtTbs+w7CSb45M/xAz0+grD6Yo81ECGpfxhAn1AuRIfcX79CPnogbpDgw==
+"@primer/css@^19.8.2":
+  version "19.8.2"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-19.8.2.tgz#4bdac86e9a11894a53e39c62ddfe0db0282fb367"
+  integrity sha512-Zjgk0asxDVj+QY8Ej3DLeJHEMzxlW4ejwmtUk3QzwUJG6R1FzCuGzrTuEN2hFugsvlPDVd1geeKfiskLEjkfOQ==
   dependencies:
-    "@primer/primitives" "^7.5.1"
+    "@primer/primitives" "^7.7.0"
 
-"@primer/primitives@^7.5.1":
+"@primer/primitives@^7.7.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-7.7.0.tgz#4e838afaf997036720a43ebab0211d2de77b1606"
   integrity sha512-LSd96U2/A70obilbdYiEKI8D/wXUtZnKmUI/ScLOlGDju4iuwd3pJsmFoBwM1Us6vV23V6mapIG+lh27RzauaA==
@@ -322,10 +322,10 @@ readdirp@~3.6.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.49.11:
-  version "1.49.11"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.49.11.tgz#1ffeb77faeed8b806a2a1e021d7c9fd3fc322cb7"
-  integrity sha512-wvS/geXgHUGs6A/4ud5BFIWKO1nKd7wYIGimDk4q4GFkJicILActpv9ueMT4eRGSsp1BdKHuw1WwAHXbhsJELQ==
+sass@^1.50.0:
+  version "1.50.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.50.0.tgz#3e407e2ebc53b12f1e35ce45efb226ea6063c7c8"
+  integrity sha512-cLsD6MEZ5URXHStxApajEh7gW189kkjn4Rc8DQweMyF+o5HF5nfEz8QYLMlPsTOD88DknatTmBWkOcw5/LnJLQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
