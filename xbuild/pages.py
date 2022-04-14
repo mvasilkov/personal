@@ -1,6 +1,6 @@
 from ast import literal_eval
 from dataclasses import asdict, dataclass
-from typing import Generator, cast
+from typing import Generator, Optional, cast
 
 from bs4 import BeautifulSoup
 from bs4.element import NavigableString, Tag
@@ -22,6 +22,7 @@ class PageProps:
     updated: int = 0
     template_name: str = 'default.html'
     use_katex: bool = False
+    steam_appid: Optional[int] = None
 
 
 def build_pages():

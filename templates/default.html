@@ -9,5 +9,8 @@
 {% endblock %}
 
 {% block content %}
-{{ content|safe }}
+    {% if steam_appid %}
+        {{ steam_appid }}
+    {% endif %}
+    {{ content|safe }}
 {% endblock %}

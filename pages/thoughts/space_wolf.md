@@ -1,3 +1,9 @@
+```python
+{
+    'steam_appid': 553210,
+}
+```
+
 # Warhammer 40,000: Space Wolf
 
 Space Wolf is a decent mobile port with garbage economy, clearly built around
