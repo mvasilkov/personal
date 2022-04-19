@@ -6,6 +6,8 @@
 
 # Warhammer 40,000: Space Wolf
 
+{% include 'includes/video_game.html' %}
+
 Space Wolf is a decent mobile port with garbage economy, clearly built around
 microtransactions. Building a strong deck requires an awful lot of grinding.
 The game has levels designed specifically for grinding.

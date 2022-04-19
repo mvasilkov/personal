@@ -7,11 +7,11 @@ from bs4.element import NavigableString, Tag
 
 from xbuild.external.git import git_clean_out, git_log_created, git_log_updated
 from xbuild.external.pandoc import pandoc_get_page
-from xbuild.settings import PHP_ROOT
+from xbuild.settings import OUR_ROOT
 from xbuild.templates import render_to_file
 
-PAGES_DIR = PHP_ROOT / 'pages'
-OUT_DIR = PHP_ROOT / 'out'
+PAGES_DIR = OUR_ROOT / 'pages'
+OUT_DIR = OUR_ROOT / 'out'
 
 
 @dataclass
