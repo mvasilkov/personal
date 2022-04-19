@@ -4,4 +4,4 @@ out/
 .vscode/
 __pycache__/
 .idea/
-xpersonal.egg-info/
+xbuild.egg-info/

@@ -10,7 +10,7 @@ TEMPLATES_DIR = OUR_ROOT / 'templates'
 
 @cache
 def get_engine():
-    return Engine(dirs=[TEMPLATES_DIR.as_posix()])
+    return Engine(dirs=[TEMPLATES_DIR.as_posix()], libraries={'xbuild': 'xbuild.templatetags'})
 
 
 @cache
