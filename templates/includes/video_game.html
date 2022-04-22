@@ -1,6 +1,8 @@
+{% load xbuild %}
+
 {% if steam_appid %}
 <div class="BtnGroup">
-    <a href="https://steamdb.info/app/{{ steam_appid }}/" class="BtnGroup-item btn">SteamDB</a>
-    <a href="steam://rungameid/{{ steam_appid }}" class="BtnGroup-item btn">Run</a>
+    <a href="{% absolute_url 'steamdb_app' steam_appid %}" class="BtnGroup-item btn">SteamDB</a>
+    <a href="{% absolute_url 'steam_run' steam_appid %}" class="BtnGroup-item btn">Run</a>
 </div>
 {% endif %}
