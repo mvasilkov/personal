@@ -11,7 +11,7 @@ brew install pandoc python yarn
 ```sh
 python3 -m venv virtual
 . ./virtual/bin/activate
-pip install -U pip wheel
+python3 -m pip install -U pip wheel
 pip install -r requirements.txt
 pip install -e .
 ```

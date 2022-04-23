@@ -8,7 +8,7 @@
 
 {% include 'includes/video_game.html' %}
 
-Space Wolf is a decent mobile port with garbage economy, clearly built around
+Space Wolf is a decent mobile port with garbage economy clearly built around
 microtransactions. Building a strong deck requires an awful lot of grinding.
 The game has levels designed specifically for grinding.
 
@@ -18,6 +18,7 @@ them; in Space Wolf, you do things costing you action points, and then wait
 until they regenerate. Play cheaper actions, and you get to take more turns.
 
 There is no real story, but the missions are genuinely fun to play. The
-default difficulty feels fair and challenging.
+default difficulty feels fair and challenging (until you build a deck of
+legendary cards, and proceed to faceroll anything the game throws at you.)
 
-I like this game.
+In conclusion, Space Wolf is not offensively bad.
