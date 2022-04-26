@@ -6,6 +6,8 @@
 
 # Warhammer 40,000: Space Wolf
 
+<img src="/static/steam/space_wolf.jpeg" width="300" height="450">
+
 {% include 'includes/video_game.html' %}
 
 Space Wolf is a decent mobile port with garbage economy clearly built around
@@ -21,4 +23,4 @@ There is no real story, but the missions are genuinely fun to play. The
 default difficulty feels fair and challenging (until you build a deck of
 legendary cards, and proceed to faceroll anything the game throws at you.)
 
-In conclusion, Space Wolf is not offensively bad.
+In conclusion, Space Wolf is not offensively bad. Only worth getting on sale.
